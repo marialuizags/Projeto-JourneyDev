@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trajetória: Back-End</title>
+    <link rel="stylesheet" href="front.css">
+</head>
+
+<body>
+    <div class="loading">
+        <div class="loading-bar" style="max-width: 0%;">
+            <span class="percent_span">0%</span>
+        </div>
+    </div>
+    <div class="main">
+        <h3 class="heading">Trajetória Back-End</h3>
+        <div class="container">
+            <ul>
+                <li id="internet">
+                    <h3 id="internetTitle" class="title">INTERNET</h3>
+                    <label><input type="checkbox" name="">Como a internet funciona?</label>
+                    <label><input type="checkbox" name="">O que é HTTP?</label>
+                    <label><input type="checkbox" name="">Browsers e como eles funcionam?</label>
+                    <label><input type="checkbox" name="">DNS e como ele funciona?</label>
+                    <label><input type="checkbox" name="">O que é Domain Name?</label>
+                    <label><input type="checkbox" name="">O que é hospedagem?</label>
+                    <span class="cicle"></span>
+                    <button id="internetButton" onclick="">Feito</button>
+                </li>
+                <li id="html">
+                    <h3 id="htmlTitle" class="title">HTML</h3>
+                    <label><input type="checkbox" name="">Noções básicas de HTML
+                    </label>
+                    <label><input type="checkbox" name="">HTML semântico</label>
+                    <label><input type="checkbox" name="">Formulários e Validações
+                    </label>
+                    <label><input type="checkbox" name="">Boas Práticas</label>
+                    <label><input type="checkbox" name="">Acessibilidade
+                    </label>
+                    <label><input type="checkbox" name="">Noções básicas de SEO
+                    </label>
+                    <span class="cicle"></span>
+                    <button id="htmlButton" onclick="">Feito</button>
+                </li>
+                <li id="css">
+                    <h3 id="cssTitle" class="title">CSS</h3>
+                    <label><input type="checkbox" name="">Noções básicas de CSS</label>
+                    <label><input type="checkbox" name="">Fazendo Layouts</label>
+                    <label><input type="checkbox" name="">Float, Grid, Flexbox, Posicionamento, Display e Box
+                        Model</label>
+                    <label><input type="checkbox" name="">Responsividade e Media Queries</label>
+                    <span class="cicle"></span>
+                    <button id="cssButton" onclick="">Feito</button>
+                </li>
+                <li id="javascript">
+                    <h3 id="javascriptTitle" class="title">JavaScript
+                    </h3>
+                    <label><input type="checkbox" name="">Noções básicas e sintaxes</label>
+                    <label><input type="checkbox" name="">Manipulação do DOM</label>
+                    <label><input type="checkbox" name="">Busca de API</label>
+                    <label><input type="checkbox" name="">ES6+ e JavaScript moderno
+                    </label>
+                    <label><input type="checkbox" name="">Aprenda e entenda os conceitos como Içamento, Event Bubbling,
+                        Escopo, Protótipo, Shadow DOM e strict.</label>
+                    <span class="cicle"></span>
+                    <button id="javascriptButton" onclick="">Feito</button>
+                </li>
+                <li id="so">
+                    <h3 id="soTitle" class="title">Sistema Operacional e Conhecimentos Gerais</h3>
+                    <label><input type="checkbox" name="">Uso do terminal</label>
+                    <label><input type="checkbox" name="">Como funcionam os sistemas operacionais</label>
+                    <label><input type="checkbox" name="">Gerenciamento de Processos</label>
+                    <label><input type="checkbox" name="">Tópicos e Simultaneidade</label>
+                    <label><input type="checkbox" name="">Comandos básicos do terminal</label>
+                    <label><input type="checkbox" name="">Gerenciamento de memória</label>
+                    <label><input type="checkbox" name="">Comunicação entre processos</label>
+                    <label><input type="checkbox" name="">Gerenciamento de E/S</label>
+                    <label><input type="checkbox" name="">Noções básicas de POSIX</label>
+                    <label><input type="checkbox" name="">Conceitos básicos de rede</label>
+                    <span class="cicle"></span>
+                    <button id="soButton" onclick="">Feito</button>
+                </li>
+                <li id="lgn">
+                    <h3 id="lgnTitle" class="title">Aprenda uma linguagem</h3>
+                    <label><input type="checkbox" name="">JavaScript</label>
+                    <label><input type="checkbox" name="">C#</label>
+                    <label><input type="checkbox" name="">Python</label>
+                    <label><input type="checkbox" name="">Ruby</label>
+                    <label><input type="checkbox" name="">Go</label>
+                    <label><input type="checkbox" name="">Rust</label>
+                    <label><input type="checkbox" name="">Java</label>
+                    <label><input type="checkbox" name="">PHP</label>
+                    <span class="cicle"></span>
+                    <button id="lgnButton" onclick="">Feito</button>
+                </li>
+                <li id="scv">
+                    <h3 id="scvTitle" class="title">Sistemas de controle de versão
+                    </h3>
+                    <label><input type="checkbox" name="">Uso básico do Git</label>
+                    <label><input type="checkbox" name="">Serviços de hospedagem de repositório</label>
+                    <label><input type="checkbox" name="">GitHub</label>
+                    <span class="cicle"></span>
+                    <button id="scvButton" onclick="">Feito</button>
+                </li>
+                <li id="db">
+                    <h3 id="dbTitle" class="title">Bancos de dados relacionais</h3>
+                    <label><input type="checkbox" name="">PostgreSQL</label>
+                    <label><input type="checkbox" name="">MySQL</label>
+                    <label><input type="checkbox" name="">MariaDB</label>
+                    <label><input type="checkbox" name="">MS SQL</label>
+                    <label><input type="checkbox" name="">Oracle</label>
+                    <span class="cicle"></span>
+                    <button id="dbButton" onclick="">Feito</button>
+                </li>
+                <li id="dbn">
+                    <h3 id="dbnTitle" class="title">Banco de dados NoSQL</h3>
+                    <label><input type="checkbox" name="">Banco de dados de documentos - MongoDB</label>
+                    <label><input type="checkbox" name="">Banco de dados de colunas - Cassandra</label>
+                    <label><input type="checkbox" name="">Banco de dados de séries temporais - InfluxDB,
+                        TimescaleDB</label>
+                    <label><input type="checkbox" name="">Banco de dados em tempo real - Firebase</label>
+                    <span class="cicle"></span>
+                    <button id="dbnButton" onclick="">Feito</button>
+                </li>
+                <li id="mdb">
+                    <h3 id="mdbTitle" class="title">Mais sobre Banco de Dados
+                    </h3>
+                    <label><input type="checkbox" name="">ORMs</label>
+                    <label><input type="checkbox" name="">ACID</label>
+                    <label><input type="checkbox" name="">Transações</label>
+                    <label><input type="checkbox" name="">Problema N+1</label>
+                    <label><input type="checkbox" name="">Normalização do banco de dados</label>
+                    <label><input type="checkbox" name="">Índices de banco de dados</label>
+                    <label><input type="checkbox" name="">Replicação de dados</label>
+                    <label><input type="checkbox" name="">Estratégias de fragmentação</label>
+                    <label><input type="checkbox" name="">Teorema CAP</label>
+                    <span class="cicle"></span>
+                    <button id="mdbButton" onclick="">Feito</button>
+                </li>
+                <li id="aapi">
+                    <h3 id="aapiTitle" class="title">Aprenda sobre APIs</h3>
+                    <label><input type="checkbox" name="">HATEOAS</label>
+                    <label><input type="checkbox" name="">OpenAPI (OAS)</label>
+                    <p>Autenticação:</p>
+                    <label><input type="checkbox" name="">Baseada em cookies</label>
+                    <label><input type="checkbox" name="">Oauth</label>
+                    <label><input type="checkbox" name="">Autenticação básica</label>
+                    <label><input type="checkbox" name="">JWT</label>
+                    <label><input type="checkbox" name="">OpenID</label>
+                    <label><input type="checkbox" name="">SAML</label>
+                    <label><input type="checkbox" name="">JSON APIs</label>
+                    <label><input type="checkbox" name="">SOAP</label>
+                    <label><input type="checkbox" name="">gRPC</label>
+                    <span class="cicle"></span>
+                    <button id="aapiButton" onclick="">Feito</button>
+                </li>
+                <li id="cache">
+                    <h3 id="cacheTitle" class="title">Cachê</h3>
+                    <label><input type="checkbox" name="">CDN</label>
+                    <label><input type="checkbox" name="">Lado do servidor - Redis, Memcached</label>
+                    <label><input type="checkbox" name="">Lado do cliente</label>
+                    <span class="cicle"></span>
+                    <button id="cacheButton" onclick="">Feito</button>
+                </li>
+                <li id="csw">
+                    <h3 id="cswTitle" class="title">Conhecimento de Segurança na Web</h3>
+                    <p>Algoritmos de hash:</p>
+                    <label><input type="checkbox" name="">MD5 e por que não deve ser usada</label>
+                    <label><input type="checkbox" name="">Família SHA</label>
+                    <label><input type="checkbox" name="">Scrypt</label>
+                    <label><input type="checkbox" name="">bcrypt</label>
+                    <label><input type="checkbox" name="">HTTPS</label>
+                    <label><input type="checkbox" name="">CORS</label>
+                    <label><input type="checkbox" name="">Política de segurança de conteúdo</label>
+                    <label><input type="checkbox" name="">Riscos de segurança - OWASP</label>
+                    <span class="cicle"></span>
+                    <button id="cswButton" onclick="">Feito</button>
+                </li>
+                <li id="teste">
+                    <h3 id="testeTitle" class="title">Teste</h3>
+                    <label><input type="checkbox" name="">Teste de integração</label>
+                    <label><input type="checkbox" name="">Teste de unidade</label>
+                    <label><input type="checkbox" name="">Teste funcional</label>
+                    <span class="cicle"></span>
+                    <button id="testeButton" onclick="">Feito</button>
+                </li>
+                <li id="cicd">
+                    <h3 id="cicdTitle" class="title">CI / CD</h3>
+                    <label><input type="checkbox" name="">Integração Contínua</label>
+                    <label><input type="checkbox" name="">Implantação Contínua</label>
+                    <span class="cicle"></span>
+                    <button id="cicdButton" onclick="">Feito</button>
+                </li>
+                <li id="pdd">
+                    <h3 id="pddTitle" class="title">Princípios de design e desenvolvimento</h3>
+                    <label><input type="checkbox" name="">Padrões de design</label>
+                    <label><input type="checkbox" name="">Design orientado por domínio</label>
+                    <label><input type="checkbox" name="">Desenvolvimento Orientado a Testes (TDD)</label>
+                    <label><input type="checkbox" name="">SOLID</label>
+                    <label><input type="checkbox" name="">KISS</label>
+                    <label><input type="checkbox" name="">YAGNI</label>
+                    <label><input type="checkbox" name="">DRY</label>
+                    <span class="cicle"></span>
+                    <button id="pddButton" onclick="">Feito</button>
+                </li>
+                <li id="pa">
+                    <h3 id="paTitle" class="title">Padrões de arquitetura</h3>
+                    <label><input type="checkbox" name="">Aplicativos monolíticos</label>
+                    <label><input type="checkbox" name="">Microsserviços</label>
+                    <label><input type="checkbox" name="">SOA</label>
+                    <label><input type="checkbox" name="">CQRS e Fornecimento de Eventos</label>
+                    <label><input type="checkbox" name="">Serveless</label>
+                    <span class="cicle"></span>
+                    <button id="paButton" onclick="">Feito</button>
+                </li>
+                <li id="mb">
+                    <h3 id="mbTitle" class="title">Motores de Busca</h3>
+                    <label><input type="checkbox" name="">Elasticsearch</label>
+                    <label><input type="checkbox" name="">Solr</label>
+                    <span class="cicle"></span>
+                    <button id="mbButton" onclick="">Feito</button>
+                </li>
+                <li id="am">
+                    <h3 id="amTitle" class="title">Agentes de mensagens</h3>
+                    <label><input type="checkbox" name="">RabbitMQ</label>
+                    <label><input type="checkbox" name="">Kafka</label>
+                    <span class="cicle"></span>
+                    <button id="amButton" onclick="">Feito</button>
+                </li>
+                <li id="docker">
+                    <h3 id="dockerTitle" class="title">Conteinerização vs Virtualização</h3>
+                    <label><input type="checkbox" name="">Docker</label>
+                    <span class="cicle"></span>
+                    <button id="dockerButton" onclick="">Feito</button>
+                </li>
+                <li id="graphql">
+                    <h3 id="graphqlTitle" class="title">GraphQL</h3>
+                    <label><input type="checkbox" name="">Apollo</label>
+                    <label><input type="checkbox" name="">Relay Modern</label>
+                    <span class="cicle"></span>
+                    <button id="graphqlButton" onclick="">Feito</button>
+                </li>
+                <li id="sweb">
+                    <h3 id="swebTitle" class="title">Servidores da web</h3>
+                    <label><input type="checkbox" name="">Nginx</label>
+                    <label><input type="checkbox" name="">Apache</label>
+                    <label><input type="checkbox" name="">Caddy</label>
+                    <label><input type="checkbox" name="">MS IIS</label>
+                    <span class="cicle"></span>
+                    <button id="swebButton" onclick="">Feito</button>
+                </li>
+                <li id="esc">
+                    <h3 id="escTitle" class="title">Escalabilidade</h3>
+                    <label><input type="checkbox" name="">Sustentabilidade do produto</label>
+                    <label><input type="checkbox" name="">Estratégias de mitigação</label>
+                    <label><input type="checkbox" name="">Entenda a diferença: instrumentação, monitoração e
+                        telemetria</label>
+                    <label><input type="checkbox" name="">Escala Horizontal vs Vertical</label>
+                    <label><input type="checkbox" name="">Construindo com observabilidade</label>
+                    <span class="cicle"></span>
+                    <button id="escButton" onclick="">Feito</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+
+        /* Array de input checkados para salvar em localhost */
+        let arrayCheckeds = [];
+
+        // Pega a barra de loading
+        let loadingBar = document.querySelector('.loading .loading-bar');
+
+        // Cria uma porcentagem
+        let percent = 0;
+
+        // Pega todos os inputs de checkbox e adiciona evento de clique */
+        let checks = document.querySelectorAll('input[type=checkbox]');
+        let qntChecks = checks.length;
+
+        checks.forEach(
+            (c,id)=>{
+                c.addEventListener('click', toggleCheck);
+                /* Marca o input para salvar no localStorage */
+                c.setAttribute('data-id', id);
+        });
+        
+
+
+        /* Total de inputs checkados */
+        let qntChecked = 0;
+
+        /* Cria um array de modais já preenchidos */
+        let modalsChecked = [];
+
+        // Evento do clique 
+        function toggleCheck(e){
+
+    
+            /* Primeira sessão, pra salvar no array geral de números checkados */
+            if(e.target.checked){
+                /* Se o input estiver checkado, incrementa e salva no localStorage */
+                arrayCheckeds.push(e.target.getAttribute('data-id'));
+                //arrayCheckeds.push(e.target.getAttribute)
+                qntChecked++;
+            } else {
+                qntChecked--;
+                /* remove do array */
+                arrayCheckeds = arrayCheckeds.filter((i)=>i != e.target.getAttribute('data-id'));
+            }
+            window.localStorage.setItem('backarrayCheckeds', JSON.stringify(arrayCheckeds));
+            
+            /* Segunda sessão */
+
+            let currentId = e.target.parentElement.parentElement.getAttribute('id');
+            //console.log(currentId);
+
+
+            /* Salva o qntChecked no localStorage */
+            window.localStorage.setItem('backqntChecked', qntChecked);
+
+            /* Calcula a porcentagem */
+            let result = (qntChecked * 100) / qntChecks;
+
+            window.localStorage.setItem('backresult', result);
+
+            /* Pega o inteiro do resultado da porcentagem e aplica ao width do loadingbar */
+            loadingBar.style.maxWidth = `${parseInt(result)}%`;
+            document.querySelector('.percent_span').innerText = `${parseInt(result)}%`;
+
+            if(parseInt(result) == 100){
+                alert("Parabéns, você atingiu o objetivo! =)");
+            }
+        }
+
+           
+        (function(){
+            storeArrayCheckeds = JSON.parse(window.localStorage.getItem('backarrayCheckeds'));
+            storeResult = window.localStorage.getItem('backresult');
+            storeQntChecked = window.localStorage.getItem('backqntChecked');
+
+            if(storeArrayCheckeds){
+                arrayCheckeds = storeArrayCheckeds;
+
+                if(arrayCheckeds){
+                    arrayCheckeds.forEach((a)=>{
+                        document.querySelectorAll('input[type=checkbox]')[a].checked = true;
+                    });
+                }
+                qntChecked = storeQntChecked;
+                result = window.localStorage.getItem('backresult');
+                loadingBar.style.maxWidth = `${parseInt(result)}%`;
+                document.querySelector('.percent_span').innerText = `${parseInt(result)}%`;
+            }
+        })();
+        
+
+    </script>
+
+    <script src="back-script.js"></script>
+
+</body>
+
+</html>

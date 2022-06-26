@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JourneyDev</title>
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+</head>
+
+<body>
+    <header id="header">
+        <a href="#" class="logo"></a>
+        <ul class="nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#anchorsb">Sobre Nós</a></li>
+            <li><a href="#anchortj">Trajetórias</a></li>
+        </ul>
+    </header>
+    <!-- Home Banner -->
+    <div class="banner">
+        <div class="bg">
+            <div class="content">
+                <h2>Bem vindo ao <br>
+                    JourneyDev!</h2>
+                <p>Para os iniciantes em Programação, aqui você terá um roteiro completo que irá te guiar e tornar mais
+                    fácil a sua
+                    jornada.</p>
+                <a href="#anchortj" class="btn">Começar agora!</a>
+            </div>
+            <img src="img-banner.png">
+        </div>
+    </div>
+
+    <!-- About -->
+    <div class="about" id="anchorsb">
+        <div class="contentBx">
+            <h2 id="sb">Sobre Nós</h2>
+            <p>O JourneyDev é um projeto que surgiu com a necessidade de guiar estudantes e amantes de programação que
+                estão começando a sua jornada, sobre o que devem aprender a seguir e assim fazer um estudo mais focado e
+                objetivo com base na área em que pretende atuar.
+            </p>
+
+        </div>
+        <img src="img-about.png">
+    </div>
+
+
+    <!-- Trajetórias -->
+    <div class="container" id="anchortj">
+        <h2 class="title-cards">Escolha sua Trajetória:</h2>
+        <div class="card">
+
+            <div class="conttent">
+                <h2>01</h2>
+                <h3>Front-End</h3>
+                <p>O front-end está relacionado com a interface na qual o usuário vai interagir, sendo essencial que
+                    o(a) desenvolvedor(a) otimize a experiência.</p>
+                <a href="front.html" target="_blank">Começar</a>
+            </div>
+        </div>
+        <div class="card">
+
+            <div class="conttent">
+                <h2>02</h2>
+                <h3>Back-End</h3>
+                <p>Back-end se relaciona com o que está por trás das aplicações desenvolvidas na programação. Ou seja,
+                    tudo que dá estrutura e apoio às ações do usuário da máquina é chamado de back-end.</p>
+                <a href="back.html" target="_blank">Começar</a>
+            </div>
+        </div>
+        <div class="card">
+
+            <div class="conttent">
+                <h2>03</h2>
+                <h3>Mobile</h3>
+                <p>O desenvolvimento mobile é um tipo de rotina de criação de soluções de TI voltadas para tablets,
+                    smartphones e outros dispositivos móveis.</p>
+                <a href="mobile.html" target="_blank">Começar</a>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        /* Sticky NavBar */
+        window.addEventListener('scroll', function () {
+            var header = document.querySelector('header');
+            header.classList.toggle('sticky', window.scrollY > 0);
+        });
+    </script>
+
+
+
+
+</body>
+
+</html>

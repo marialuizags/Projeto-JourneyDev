@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <title>Trajetória: Mobile</title>
+    <link rel="stylesheet" href="front.css">
+</head>
+
+<body>
+    <div class="loading">
+        <div class="loading-bar" style="max-width: 0%;">
+            <span class="percent_span">0%</span>
+        </div>
+    </div>
+    <div class="main">
+        <h3 class="heading">Trajetória Mobile</h3>
+        <div class="container">
+            <ul>
+                <li id="el">
+                    <h3 id="elTitle" class="title">Escolha uma linguagem</h3>
+                    <label><input type="checkbox" name="">Java</label>
+                    <label><input type="checkbox" name="">Kotlin</label>
+                    <label><input type="checkbox" name="">Flutter</label>
+                    <span class="cicle"></span>
+                    <button id="elButton" onclick="">Feito</button>
+                </li>
+                <li id="fundamentos">
+                    <h3 id="fundamentosTitle" class="title">Os Fundamentos</h3>
+                    <label><input type="checkbox" name="">Instale o Android Studio</label>
+                    <label><input type="checkbox" name="">Aprenda o básico de Kotlin</label>
+                    <label><input type="checkbox" name="">Básico de OOP</label>
+                    <label><input type="checkbox" name="">Estrutura de Dados e Algoritmos</label>
+                    <label><input type="checkbox" name="">O que é e como usar Gradle?</label>
+                    <span class="cicle"></span>
+                    <button id="fundamentosButton" onclick="">Feito</button>
+                </li>
+                <li id="scv">
+                    <h3 id="scvTitle" class="title">Sistemas de controle de versão</h3>
+                    <label><input type="checkbox" name="">Aprenda a usar o Git</label>
+                    <label><input type="checkbox" name="">Serviços de hospedagem de repositório</label>
+                    <label><input type="checkbox" name="">GitHub</label>
+                    <span class="cicle"></span>
+                    <button id="scvButton" onclick="">Feito</button>
+                </li>
+                <li id="ca">
+                    <h3 id="caTitle" class="title">Construa um aplicativo</h3>
+                    <label><input type="checkbox" name="">Usando atividades e ciclos de vida de atividades</label>
+                    <label><input type="checkbox" name="">Construindo interfaces flexíveis usando fragmentos</label>
+                    <label><input type="checkbox" name="">Depuração usando o Android Studio Debugger</label>
+                    <p>Componentes e seu uso:</p>
+                    <label><input type="checkbox" name="">- Room</label>
+                    <label><input type="checkbox" name="">- Live Data</label>
+                    <label><input type="checkbox" name="">- Data Binding</label>
+                    <label><input type="checkbox" name="">- Work Manager</label>
+                    <label><input type="checkbox" name="">- Navigation</label>
+                    <label><input type="checkbox" name="">Provedores de conteúdo</label>
+                    <label><input type="checkbox" name="">Manipulando configurações de aplicativos</label>
+                    <label><input type="checkbox" name="">Entendendo o contexto</label>
+                    <p>3rd Party Libraries:</p>
+                    <label><input type="checkbox" name="">- e.g. Glide</label>
+                    <label><input type="checkbox" name="">- Retrofit</label>
+                    <label><input type="checkbox" name="">- Crashlytics</label>
+                    <label><input type="checkbox" name="">- GSON</label>
+                    <span class="cicle"></span>
+                    <button id="caButton" onclick="">Feito</button>
+                </li>
+                <li id="ear">
+                    <h3 id="earTitle" class="title">Escrevendo aplicativos robustos</h3>
+                    <label><input type="checkbox" name="">Segurança</label>
+                    <label><input type="checkbox" name="">Testes: JUnit e Espresso</label>
+                    <label><input type="checkbox" name="">Gerenciamento de dependências: Dagger e Koin</label>
+                    <label><input type="checkbox" name="">Simultaneidade: RxJava e Coroutines</label>
+                    <label><input type="checkbox" name="">Aprenda Multithreading e sua necessidade</label>
+                    <label><input type="checkbox" name="">Como escrever código encadeado</label>
+                    <label><input type="checkbox" name="">Gerenciamento de memória</label>
+                    <label><input type="checkbox" name="">Como o Android usa tópicos internamente</label>
+                    <span class="cicle"></span>
+                    <button id="earButton" onclick="">Feito</button>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+    <script>
+
+        /* Array de input checkados para salvar em localhost */
+        let arrayCheckeds = [];
+
+        // Pega a barra de loading
+        let loadingBar = document.querySelector('.loading .loading-bar');
+
+        // Cria uma porcentagem
+        let percent = 0;
+
+        // Pega todos os inputs de checkbox e adiciona evento de clique */
+        let checks = document.querySelectorAll('input[type=checkbox]');
+        let qntChecks = checks.length;
+
+        checks.forEach(
+            (c,id)=>{
+                c.addEventListener('click', toggleCheck);
+                /* Marca o input para salvar no localStorage */
+                c.setAttribute('data-id', id);
+        });
+        
+
+
+        /* Total de inputs checkados */
+        let qntChecked = 0;
+
+        /* Cria um array de modais já preenchidos */
+        let modalsChecked = [];
+
+        // Evento do clique 
+        function toggleCheck(e){
+
+    
+            /* Primeira sessão, pra salvar no array geral de números checkados */
+            if(e.target.checked){
+                /* Se o input estiver checkado, incrementa e salva no localStorage */
+                arrayCheckeds.push(e.target.getAttribute('data-id'));
+                //arrayCheckeds.push(e.target.getAttribute)
+                qntChecked++;
+            } else {
+                qntChecked--;
+                /* remove do array */
+                arrayCheckeds = arrayCheckeds.filter((i)=>i != e.target.getAttribute('data-id'));
+            }
+            window.localStorage.setItem('mobilearrayCheckeds', JSON.stringify(arrayCheckeds));
+            
+            /* Segunda sessão */
+
+            let currentId = e.target.parentElement.parentElement.getAttribute('id');
+            //console.log(currentId);
+
+
+            /* Salva o qntChecked no localStorage */
+            window.localStorage.setItem('mobileqntChecked', qntChecked);
+
+            /* Calcula a porcentagem */
+            let result = (qntChecked * 100) / qntChecks;
+
+            window.localStorage.setItem('mobileresult', result);
+
+            /* Pega o inteiro do resultado da porcentagem e aplica ao width do loadingbar */
+            loadingBar.style.maxWidth = `${parseInt(result)}%`;
+            document.querySelector('.percent_span').innerText = `${parseInt(result)}%`;
+
+            if(parseInt(result) == 100){
+                alert("Parabéns, você atingiu o objetivo! =)");
+            }
+        }
+
+           
+        (function(){
+            storeArrayCheckeds = JSON.parse(window.localStorage.getItem('mobilearrayCheckeds'));
+            storeResult = window.localStorage.getItem('mobileresult');
+            storeQntChecked = window.localStorage.getItem('mobileqntChecked');
+
+            if(storeArrayCheckeds){
+                arrayCheckeds = storeArrayCheckeds;
+
+                if(arrayCheckeds){
+                    arrayCheckeds.forEach((a)=>{
+                        document.querySelectorAll('input[type=checkbox]')[a].checked = true;
+                    });
+                }
+                qntChecked = storeQntChecked;
+                result = window.localStorage.getItem('mobileresult');
+                loadingBar.style.maxWidth = `${parseInt(result)}%`;
+                document.querySelector('.percent_span').innerText = `${parseInt(result)}%`;
+            }
+        })();
+        
+
+    </script>
+
+    <script src="mobile-script.js"></script>
+</body>
+
+</html>
